@@ -8,7 +8,7 @@ import (
 func main() {
 
 	s := "Hello World "
-	s1 := "India-is-a-great-country"
+	s1 := "-India-is-a-great-country-"
 	substr := "World"
 	fmt.Println(containsSubstring(s, substr))
 	fmt.Println(upperCase(s))
@@ -21,6 +21,11 @@ func main() {
 	fmt.Println(join(split(s1)))
 	fmt.Println(hasPrefix(s))
 	fmt.Println(hasSuffix(s))
+	fmt.Println(countChar(s))
+	printChar(s)
+	printAscii(s)
+	fmt.Println(trimSpace(s))
+	fmt.Println(trimChar(s1))
 }
 
 func containsSubstring(s string, substr string) bool {
@@ -65,4 +70,28 @@ func hasPrefix(s string) bool {
 
 func hasSuffix(s string) bool {
 	return strings.HasSuffix(s, "rld")
+}
+
+func countChar(s string) int {
+	return strings.Count(s, "o")
+}
+
+func printChar(s string) {
+	for _, ch := range s {
+		fmt.Println(string(ch))
+	}
+}
+
+func printAscii(s string) {
+	for _, ch := range s {
+		fmt.Println(string(ch), ch)
+	}
+}
+
+func trimSpace(s string) string {
+	return strings.TrimSpace(s)
+}
+
+func trimChar(s string) string {
+	return strings.Trim(s, "-")
 }
