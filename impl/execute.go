@@ -9,6 +9,7 @@ func Execute() {
 	s2 := "hello world "
 	s3 := "abbb"
 	s4 := "geeksforgeeks"
+	s5 := "babb"
 	strArray := []string{"flower", "flow", "flight"}
 	fmt.Println(containsSubstring(s, substr))
 	fmt.Println(upperCase(s))
@@ -42,4 +43,5 @@ func Execute() {
 	fmt.Println(reverseWordsInString(s))
 	fmt.Println(firstNonRepeatingChar(s4))
 	fmt.Println(longestCommonPrefix(strArray))
+	fmt.Println(isAnagram(s3, s5))
 }
