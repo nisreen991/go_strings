@@ -8,6 +8,7 @@ func Execute() {
 	substr := "World"
 	s2 := "hello world "
 	s3 := "abbb"
+	s4 := "geeksforgeeks"
 	fmt.Println(containsSubstring(s, substr))
 	fmt.Println(upperCase(s))
 	fmt.Println(lowerCase(s))
@@ -38,4 +39,5 @@ func Execute() {
 	fmt.Println(palindromeCheck(s3))
 	fmt.Println(reverseString(s3))
 	fmt.Println(reverseWordsInString(s))
+	fmt.Println(firstNonRepeatingChar(s4))
 }
