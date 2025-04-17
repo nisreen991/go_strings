@@ -36,4 +36,5 @@ func Execute() {
 	fmt.Println(replaceAll(s))
 	fmt.Println(titleCase(s1))
 	fmt.Println(palindromeCheck(s3))
+	fmt.Print(reverseString(s3))
 }
