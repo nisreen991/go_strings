@@ -10,6 +10,7 @@ func main() {
 	s := "Hello World "
 	s1 := "-India-is-a-great-country-"
 	substr := "World"
+	s2 := "hello world "
 	fmt.Println(containsSubstring(s, substr))
 	fmt.Println(upperCase(s))
 	fmt.Println(lowerCase(s))
@@ -26,6 +27,17 @@ func main() {
 	printAscii(s)
 	fmt.Println(trimSpace(s))
 	fmt.Println(trimChar(s1))
+	fmt.Println(trimLeft(s1))
+	fmt.Println(trimRight(s1))
+	fmt.Println(compareString(s, s1))
+	fmt.Println(containsChar(s1))
+	fmt.Println(containsUniCode(s))
+	fmt.Println(matchStrings(s, s2))
+	fmt.Println(indexByte(s))
+	fmt.Println(lastOccurenceIndex(s, substr))
+	fmt.Println(lastOccurenceByte(s))
+	fmt.Println(replaceAll(s))
+	fmt.Println(titleCase(s1))
 }
 
 func containsSubstring(s string, substr string) bool {
@@ -94,4 +106,48 @@ func trimSpace(s string) string {
 
 func trimChar(s string) string {
 	return strings.Trim(s, "-")
+}
+
+func trimLeft(s string) string {
+	return strings.TrimLeft(s, "-")
+}
+
+func trimRight(s string) string {
+	return strings.TrimRight(s, "-")
+}
+
+func compareString(s1, s2 string) int {
+	return strings.Compare(s1, s2)
+}
+
+func containsChar(s string) bool {
+	return strings.ContainsAny(s, "r")
+}
+
+func containsUniCode(s string) bool {
+	return strings.ContainsRune(s, 68)
+}
+
+func matchStrings(s1, s2 string) bool {
+	return strings.EqualFold(s1, s2)
+}
+
+func indexByte(s string) int {
+	return strings.IndexByte(s, 'o')
+}
+
+func lastOccurenceIndex(s, substr string) int {
+	return strings.LastIndex(s, substr)
+}
+
+func lastOccurenceByte(s string) int {
+	return strings.LastIndexByte(s, 'r')
+}
+
+func replaceAll(s string) string {
+	return strings.ReplaceAll(s, "World", "Kuwait")
+}
+
+func titleCase(s string) string {
+	return strings.Title(s)
 }
